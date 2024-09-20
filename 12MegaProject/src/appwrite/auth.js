@@ -17,7 +17,7 @@ export class AuthService{
             const userAccount = await this.account.create(ID.unique(), email, password, name);
             if(userAccount){
                // call another function
-               // here  we can use return but if we create register sucessfully then we direct login
+               // here  we can use return but if we create register successfully then we direct login
                return this.login({email, password});
             }else{
                 return userAccount;
@@ -56,4 +56,4 @@ export class AuthService{
 }
 const authService = new AuthService();
 
-export default AuthService;
+export default authService;
