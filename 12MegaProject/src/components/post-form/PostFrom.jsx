@@ -1,7 +1,7 @@
 import React,{useCallback} from 'react'
 import { useForm } from 'react-hook-form'
 import {Button,Input, Select, RTE} from '../index'
-import { useNavigate } from 'react-router-dom'
+import { replace, useNavigate } from 'react-router-dom'
 import appwriteServices from '../../appwrite/config'
 import { useSelector } from 'react-redux'
 
@@ -42,6 +42,35 @@ const PostFrom = ({post}) => {
             }
         }
     }
+
+    const slugTransform = useCallback((value)=>{
+        if(value && typeof value == 'string'){
+            // First method
+            // const slug = value.toLowerCase().replace(/ /g,'-')
+            // setValue('slug',slug)
+            // return slug
+
+            // 2nd method
+            return value
+            .trim()
+            .toLowerCase()
+            .replace(/^[a-zA-z\d\s]+/g, '-')
+            .replace(/\s/g, '-')
+        } 
+        return ''
+    },[])
+
+    React.useEffect(()=>{
+        const subscription = watch((value,{name})=>{
+            if (name === 'title') {
+                setValue('slug', slugTransform(value.title,{shouldValidate: true}))
+            }
+        })
+
+        return ()=>{
+            subscription.unsubscribe()
+        }
+    },[watch,slugTransform,setValue])
 
   return (
     <div>PostFrom</div>
