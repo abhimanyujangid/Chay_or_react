@@ -1,6 +1,5 @@
 Here’s the updated `README.md` file with your project name:
 
-```markdown
 # 12megaproject
 ## Description
 
