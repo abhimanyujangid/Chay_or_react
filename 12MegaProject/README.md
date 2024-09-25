@@ -41,7 +41,7 @@ Instructions on how to use your project.
 
 1. **Start the development server**:
     ```bash
-    npm start
+    npm run dev
     ```
 
 2. **Build the project for production**:
