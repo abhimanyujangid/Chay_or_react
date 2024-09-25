@@ -1,4 +1,3 @@
-Here’s the updated `README.md` file with your project name:
 
 # 12megaproject
 ## Description
