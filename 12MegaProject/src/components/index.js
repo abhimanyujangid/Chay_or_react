@@ -7,7 +7,11 @@ import Container from "./container/Container";
 import Input from "./Input";
 import Select from "./Select";  
 import RTE from "./RTE";
-
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
+import PostForm from "./post-form/PostForm";
+import PostCard from "./PostCard"
+import AuthLayout from "./AuthLayout"
 export {
     Header,
     Footer ,
@@ -17,5 +21,10 @@ export {
     Container,
     Input,
     Select,
-    RTE
+    RTE,
+    Signup,
+    Login,
+    PostForm ,
+    PostCard,
+    AuthLayout
 };

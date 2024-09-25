@@ -22,7 +22,7 @@ const Login = () => {
                 if (userData) {
                     dispatch(authLogin(userData))
                     navigate("/")
-                }
+                } 
             }
         } catch (error) {
             setError(error.message)
@@ -40,7 +40,7 @@ const Login = () => {
                 <p className='mt-2 text-center text-base text-black/60'>
                     Don&apos;t have an account?&nbsp;
                     <Link to="/signup" className='font-medium text-primary transition-all duration-200 hover:underline'>
-                        Sign Up
+                        Sign Up 
                     </Link>
                 </p>
                 {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}

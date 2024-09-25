@@ -4,7 +4,7 @@ import {Controller} from 'react-hook-form'
 
 export default function RTE ({name, control, label, defaultValue = "" }){
   return (
-   <div className='w-full'>
+   <div className='w-full'> 
     {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
     <Controller
     name={name || "content"}
@@ -16,7 +16,7 @@ export default function RTE ({name, control, label, defaultValue = "" }){
             initialValue: defaultValue,
             height: 500,
             menubar: false,
-            plugins: [
+            plugins: [    
                 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
                 'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount',"anchor"

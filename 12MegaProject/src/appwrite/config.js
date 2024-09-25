@@ -63,7 +63,7 @@ export class Service {
             return true
         } catch (error) {
             console.log("Appwrite service :: deletePost :: error", error);
-             return false
+            return false
         }
     }
 
