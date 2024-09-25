@@ -49,6 +49,3 @@ Instructions on how to use your project.
     npm run build
     ```
 
-## Contributing
-
-Guidelines for contributing to the project.
